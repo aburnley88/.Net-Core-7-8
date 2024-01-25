@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "5QfL/9LE1SI50LMzJUfZYoIQ7Vq7Ph2X2YoHR4a7c2I=",
+  "Source": "HTTPWEB",
+  "BasePath": "_content/HTTPWEB",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
