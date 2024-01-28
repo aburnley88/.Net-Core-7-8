@@ -24,19 +24,9 @@ namespace BankingControllerExample.Controllers
         public IActionResult GetCurrentBalance()
         {
             var acctNum = Convert.ToInt32(Request.RouteValues["accountNumber"]);
-
-            if( acctNum == 0)
-            {
-                return NotFound("Account number should be provided");
-            }
-            else if (acctNum != 1001)
-            {
-                return BadRequest("Account number should be 1001");
-            }
-            else
-            {
-                return Ok(5000);
-            }
+          
+            return acctNum == 0 ? NotFound("Account number should be provided") : 
+                (acctNum != 1001 ? BadRequest("Account number should be 1001") : Ok(5000));
 
         }
     }
