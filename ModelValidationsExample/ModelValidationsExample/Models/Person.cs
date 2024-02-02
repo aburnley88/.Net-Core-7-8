@@ -33,6 +33,8 @@ namespace ModelValidationsExample.Models
         [Range(0, 999.99, ErrorMessage ="{0} Must be between ${1} and ${2} digits")]
         public double Price { get; set; }
 
+        public List<string?> Tags { get; set; } = new List<string?>();
+
         [OldEnoughValidator(18, ErrorMessage ="Birthday must be beyond {0}")]
         //[Display(Name = "Date of birth")]
         public DateTime? BirthDate { get; set; }
