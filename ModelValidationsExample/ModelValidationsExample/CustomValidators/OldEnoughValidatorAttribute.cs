@@ -1,5 +1,5 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿
+global using System.ComponentModel.DataAnnotations;
 
 namespace ModelValidationsExample.CustomValidators
 {
@@ -24,8 +24,7 @@ namespace ModelValidationsExample.CustomValidators
                     ? ValidationResult.Success
                     : new ValidationResult(string.Format(ErrorMessage, MinimumBirthDate));
             }
-            // Return a validation error or null depending on whether you want to enforce this field to be required
-            return new ValidationResult("BirthDate is required."); // or return null if the field is not required
+            return null;
         }
     }
 }
