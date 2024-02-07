@@ -1,0 +1,41 @@
+﻿@model CityWeather;
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Weather</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-center">
+        <div class="page-content">
+            <div class="margin-bottom">
+                <h1>@ViewBag.title</h1>
+            </div>
+
+            <div class="margin-left" style="margin-top: 60px;">
+                <div class="flex">
+                        <div class="box cursor-pointer w-30">
+                            <div class="flex-borderless">
+                                <div class="w-50">
+                                    <h2>@Model.CityName</h2>
+                                    <h4 class="text-dark-grey">@Model.DateAndTime.ToString("hh:mm tt")</h4>
+                                </div>
+                                <div class="w-50 border-left">
+                                    <h1 class="margin-left">@Model.TempFahrenheit <sup class="text-grey">&#8457</sup></h1>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <a asp-action="index" style="margin-left: 25%">Back to Weather Home Page</a>
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>
